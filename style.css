@@ -1,46 +1,93 @@
 * {
     box-sizing: border-box;
 }
+
 .contact {
     display: flex;
     align-items: center;
     padding: 8px;
     background-color: #c8c5d140;
 }
+
 .contact__btn-remove {
     background-color: #E7E5EB;
 }
+
 .contact__input {
     padding: 0;
 }
+
 .contact__input:focus {
     outline: none;
 }
+
 .contact__input-title, .contact__input-value {
     border: none;
     color: #333;
     background-color: transparent;
 }
+
 .contact__input-value::placeholder {
     font-weight: 400;
     font-size: 14px;
 }
+
 .contact__input-title {
     font-weight: 400;
     font-size: 12px;
+
 }
 
-.contact__wrapp-title, .contact__wrapp-value, .contact__btn-remove{
+.contact__wrapp-title, .contact__wrapp-value, .contact__btn-remove {
     padding: 10px 12px;
     border: 1px solid #333;
     border-color: #C8C5D1;
 }
+
 .contact__wrapp-title, .contact__wrapp-value {
     border-right: none;
 }
+
 .contact__wrapp-title {
     background-color: #E7E5EB;
 }
+
 .contact--icon {
     pointer-events: none;
+}
+
+/* dropdown */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown__list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: #F4F3F6;
+}
+
+.dropdown__item {
+    margin: 0;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    cursor: pointer;
+}
+.dropdown__item:hover {
+    background-color: #E7E5EB;
+}
+
+/* end dropdown */
+
+.open {
+    display: block;
 }

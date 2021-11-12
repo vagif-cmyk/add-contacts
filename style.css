@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+/* block contact */
+
 .contact {
     display: flex;
     align-items: center;
@@ -11,14 +13,12 @@
 
 .contact__btn-remove {
     background-color: #E7E5EB;
+    cursor: pointer;
+    transition: border-color .3s ease;
 }
 
 .contact__input {
     padding: 0;
-}
-
-.contact__input:focus {
-    outline: none;
 }
 
 .contact__input-title, .contact__input-value {
@@ -35,7 +35,7 @@
 .contact__input-title {
     font-weight: 400;
     font-size: 12px;
-
+    cursor: pointer;
 }
 
 .contact__wrapp-title, .contact__wrapp-value, .contact__btn-remove {
@@ -56,10 +56,39 @@
     pointer-events: none;
 }
 
+.contact__btn-remove path {
+    transition: fill .3s ease;
+}
+
+.contact__btn-remove:hover {
+    border-color: red;
+}
+
+.contact__btn-remove:hover path {
+    fill: red;
+}
+
+.contact__input:focus {
+    outline: none;
+}
+
+/* end block contact */
+
 /* dropdown */
 
 .dropdown {
     position: relative;
+    cursor: pointer;
+}
+
+.dropdown__list.open~svg {
+    transition: transform .2s ease-in-out;
+    transform: rotate(180deg);
+}
+
+.dropdown__list~svg {
+    transition: transform .2s ease-in-out;
+    transform: rotate(0);
 }
 
 .dropdown__list {
@@ -81,7 +110,9 @@
     font-weight: 400;
     font-size: 12px;
     cursor: pointer;
+    transition: background-color .2s ease;
 }
+
 .dropdown__item:hover {
     background-color: #E7E5EB;
 }
